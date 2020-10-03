@@ -1,0 +1,246 @@
+/* 
+UTILISER POLICE PERSONALISEE
+1 -> Télécharger la police
+2 -> Des services propres à cette fonction : google font et copier le lien.
+
+TAILLE DE LA POLICE
+1 -> une taille absolue
+    -> Ne prend pas en considération l'utilisateur
+    -> Pixel (px)
+2 -> une taille relative
+    -> Prend en considération l'utilisateur
+    -> "words"
+        -> xx-small
+        -> x-small
+        -> small
+        -> medium
+        -> large
+        -> x-large
+        -> xx-large
+    -> "em"
+        -> 1em -> normal selon l'élément
+    -> "ex"
+        -> 100% -> légèrement normal selon l'élément
+
+LES BALISES
+inlines : <a></a>
+    -> <span></span>
+
+block : <img/>
+    -> <div></div>
+
+POSITIONNEMENT
+absolu
+    -> à n'importe quel endroit et au dessus des autres élements
+
+fixe
+    -> à un endroit fixe tout le temps
+
+relatif
+    -> décaler l'élement par rapport à sa position
+
+LES MEDIAS QUERYS
+    -> Charger une feuille de style différente
+    <link rel="stylesheet" type="text/css" href="feuille_petit_ecran.css" media="all and (max_width: 1000px))">
+    -> Changer les  propriétés dans la feuille de style de base
+
+VARIABLES EN CSS
+--nomDeLaVariable: VALEUR;
+
+UTILISER
+var(--nomDeLaVariable);
+
+:root : racine c'est à dire <html></html>
+:root {
+    --nomDeLaVariable: pink;
+}
+*/
+
+body {    
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+    background-color: #F4F7F6;
+}
+
+header {
+    text-align: center;
+    background-color: #1D1D1D;
+    color: white;
+    padding-bottom: 30px;
+}
+
+section {
+    text-align: center;
+}
+
+article {
+    margin-top: 50px;
+}
+nav {
+    background-color: white;
+    text-align: center; 
+    box-shadow: 0px 3px 1px -1px rgba(0, 0, 0, 0.5);
+    font-size: 1.1em;
+    padding: 15px;
+}
+
+footer {
+    background-color: #1D1D1D;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+h1 {
+    font-family: 'better', Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    padding-top: 30px;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    width: 400px;
+    margin: auto;
+}
+
+h3:before {
+    content: "« ";
+    color: grey;
+}
+
+h3 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+h3:after {
+    content: " »";
+    color: grey;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+ul {
+    padding: 0;
+    display: inline;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+}
+
+li:hover {
+    font-weight: bold;
+}
+
+
+/* CLASSES */
+.separator {
+    width: 40px;
+    height: 1px;
+    margin: 15px auto;
+    display: block;
+    background-color: #999999;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.projet {
+    width: 400px;
+    margin: 30px;
+    display: inline-block;
+    background-color: white;
+    padding-bottom: 15px;
+    border: 0px black solid;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.projet:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: 0.3s;
+}
+
+.projet img {
+    min-width: 400px;
+    height: 266px;
+}
+
+.picture {
+    width: 400px;
+    height: 266px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.picture-project img, .picture-project video {
+    width: 80%;
+}
+
+.projet .date-project {
+    font-size: 0.7em;
+}
+
+.projet span {
+    display: block;
+    text-transform: uppercase;
+}
+/* ID */
+#contact {
+    border: 1px black solid;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+#logo {
+    margin-top: 30px;
+    width: 50px;
+}
+
+#projets {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#picture-project img {
+    width: 90%;
+    margin-top: 30px;
+}
+
+/* A toujour mettre pour que la taille des block soit celle demandée */
+* {
+    box-sizing: border-box;
+}
+
+/* POLICES INSTALLEES*/
+@font-face {
+    font-family: 'better';
+    src:    url('../src/better-Peronal-Use.ttf') format('truetype'),
+            url('../src/better-Peronal-Use.otf') format('otf');
+}
+
+/* MEDIA */
+@media all and (max-width: 1000px) {
+    .projet { width: 100%; margin: 15px auto;}
+    .projet img { width:100%; min-width: auto; height: auto; }
+    .projet .picture { width: 100%; height: auto; }
+    header h2 { width: 90%; }
+}
+    
+/*
+Iphone : 980px
+
+*/

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Premier projet | John Doe</title>
+        <link rel="stylesheet" type="text/css" href="design\default.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet"> 
+        <link rel="shortcut icon" href="pictures/favicon.png" type="image/png">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <header>
+            <h1>John Doe</h1>
+            <!-- SEPARATEUR --> 
+            <span class="separator"></span>
+
+            <h2>Mon porte folio</h2>
+        </header> 
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Aller à l'accueil" target="_blank">Accueil</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>    
+        </nav>      
+        <section class="container">
+            <article>
+                <h3>Introduction</h3>
+                <p>Ceci est mon porte folio.</p>
+            <!-- PRODUCTION -->
+            </article> 
+            <article id="picture-project">
+                <h3>Production</h3>
+
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/SNggmeilXDQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <video controls width="80%">
+                    <source src="pictures/vacances.mp4">   
+                    Votre navigateur n'arrive pas à lire cette vidéo.
+                </video>
+
+                <img src="pictures/presentation.png" alt="mon premier projet" />
+            </article>          
+            <article>
+                <h3>Contact</h3>
+                <div id="contact">
+                    <p>Si vous voulez me contacter, n'hésitez pas à m'envoyer un email à <b><a href="mailto:john@doe.com">john@doe.com</a></b>.</p>
+                </div>
+            </article>        
+        </section>  
+        <footer>
+            <span>2020 &copy; John Doe</span>
+        </footer>  
+    </body>
+</html>
